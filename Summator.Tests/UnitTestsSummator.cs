@@ -31,11 +31,42 @@ namespace Summator.Tests
         }
 
         [Test]
+        public void Test_Sum_One_Negative_Numbers()
+        {
+            long actual = Summator.Sum(new long[] { -3 });
+
+            int expected = -3;
+
+            Assert.That(expected == actual);
+        }
+
+        [Test]
         public void Test_Sum_Two_Positive_Numbers()
         {
             long actual = Summator.Sum(new long[] { 1, 3 });
 
             int expected = 4;
+
+            Assert.That(expected == actual);
+        }
+
+        [Test]
+        public void Test_Sum_With_Big_Number()
+        {
+
+            long actual = Summator.Sum(new long[] { 1000000000, 1000000000 });
+
+            int expected = 2000000000;
+
+            Assert.That(expected == actual);
+        }
+
+        [Test]
+        public void Test_Sum_Two_Negative_Numbers()
+        {
+            long actual = Summator.Sum(new long[] { -1, -3 });
+
+            int expected = -4;
 
             Assert.That(expected == actual);
         }
