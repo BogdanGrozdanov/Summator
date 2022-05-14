@@ -70,5 +70,14 @@ namespace Summator.Tests
 
             Assert.That(expected == actual);
         }
+        [Test]
+        public void Test_Sum_With_PositiveAndNegative_Numbers()
+        {
+            long actual = Summator.Sum(new long[] { -1, 3 });
+
+            int expected = 2;
+
+            Assert.That(expected == actual);
+        }
     }
 }
