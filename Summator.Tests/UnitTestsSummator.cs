@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace Summator.Tests
 {
@@ -70,6 +71,7 @@ namespace Summator.Tests
 
             Assert.That(expected == actual);
         }
+
         [Test]
         public void Test_Sum_With_PositiveAndNegative_Numbers()
         {
@@ -79,5 +81,16 @@ namespace Summator.Tests
 
             Assert.That(expected == actual);
         }
+
+        //[Test]
+        //public void Test_Average_With_Empty_Arr()
+        //{
+        //    var arr =new long[] { };
+        //    var actual = Summator.Average(arr);
+
+        //    Assert.That(actual, );
+
+
+        //}
     }
 }
