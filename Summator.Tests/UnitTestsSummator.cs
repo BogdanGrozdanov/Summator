@@ -31,6 +31,16 @@ namespace Summator.Tests
         }
 
         [Test]
+        public void Test_Sum_One_Negative_Numbers()
+        {
+            long actual = Summator.Sum(new long[] { -3 });
+
+            int expected = -3;
+
+            Assert.That(expected == actual);
+        }
+
+        [Test]
         public void Test_Sum_Two_Positive_Numbers()
         {
             long actual = Summator.Sum(new long[] { 1, 3 });
