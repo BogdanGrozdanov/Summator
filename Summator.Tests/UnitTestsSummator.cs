@@ -82,15 +82,14 @@ namespace Summator.Tests
             Assert.That(expected == actual);
         }
 
-        //[Test]
-        //public void Test_Average_With_Empty_Arr()
-        //{
-        //    var arr =new long[] { };
-        //    var actual = Summator.Average(arr);
+        [Test]
+        public void Test_Average_With_Empty_Arr()
+        {
+            var arr = new long[] { };
+            var actual = Summator.Average(arr);
+            Assert.That(actual, Is.EqualTo(0));
 
-        //    Assert.That(actual, );
-
-
-        //}
+            
+        }
     }
 }
