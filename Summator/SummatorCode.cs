@@ -17,11 +17,11 @@ namespace Summator
             return sum;
         }
 
-        public static long Average(long[] arr)
+        public static double Average(double[] arr)
         {
-            long sum = 0;
-            for (int i = 0; i < arr
-              .Length; i++)
+            double sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
                 sum += arr[i];
 
             if (arr.Length == 0)
