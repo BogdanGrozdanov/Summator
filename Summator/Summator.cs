@@ -6,7 +6,7 @@ namespace Summator
     {
         static void Main(string[] args)
         {
-            var arr = new long[] { 1,1};
+            var arr = new long[] { 1, 1 };
             Console.WriteLine(Sum(arr));
         }
         public static long Sum(long[] arr)
@@ -18,13 +18,26 @@ namespace Summator
             return sum;
         }
 
-        public static double Average(double[] arr)
+        public static long Average(long[] arr)
         {
-            double sum = 0;
+            long sum = 0;
             for (int i = 1; i < arr
               .Length; i++)
                 sum += arr[i];
-            return sum / arr.Length;
+            if (arr.Length == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return sum / arr.Length;
+            }
+
+            
+            
+            
+
+
         }
 
     }
