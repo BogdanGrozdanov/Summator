@@ -85,7 +85,7 @@ namespace Summator.Tests
         [Test]
         public void Test_Average_With_Empty_Arr()
         {
-            var arr = new long[] { };
+            var arr = new double[] { };
             var actual = SummatorCode.Average(arr);
             Assert.That(actual, Is.EqualTo(0));
         }
@@ -93,17 +93,17 @@ namespace Summator.Tests
         [Test]
         public void Test_Average_With_PositiveValue_Arr()
         {
-            var arr = new long[] {10,20,30 };
+            var arr = new double[] { 10, 20, 30 };
             var actual = SummatorCode.Average(arr);
             Assert.That(actual, Is.EqualTo(20));
         }
 
-    //    [Test]
-    //    public void Test_Average_With_PositiveValueFloat_Arr()
-    //    {
-    //        var arr = new long[] { 10.5, 20,5, 30 };
-    //        var actual = SummatorCode.Average(arr);
-    //        Assert.That(actual, Is.EqualTo(20));
-    //    }
-    //}
+        [Test]
+        public void Test_Average_With_PositiveValueFloat_Arr()
+        {
+            var arr = new double[] { 10.5, 20.5, 30.5 };
+            var actual = SummatorCode.Average(arr);
+            Assert.That(actual, Is.EqualTo(20.5));
+        }
+    }
 }
