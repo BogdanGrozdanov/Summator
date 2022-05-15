@@ -105,5 +105,29 @@ namespace Summator.Tests
             var actual = SummatorCode.Average(arr);
             Assert.That(actual, Is.EqualTo(20.5));
         }
+
+        [Test]
+        public void Test_Average_With_NegativeValue_Arr()
+        {
+            var arr = new double[] { -10, -20, -30 };
+            var actual = SummatorCode.Average(arr);
+            Assert.That(actual, Is.EqualTo(-20));
+        }
+
+        [Test]
+        public void Test_Average_With_NegativeValueFloat_Arr()
+        {
+            var arr = new double[] { -10.5, -20.5, -30.5 };
+            var actual = SummatorCode.Average(arr);
+            Assert.That(actual, Is.EqualTo(-20.5));
+        }
+
+        [Test]
+        public void Test_Average_With_Negative_And_Positive_Value_Arr()
+        {
+            var arr = new double[] { 20.5, -20.5, 30.5 };
+            var actual = SummatorCode.Average(arr);
+            Assert.That(actual, Is.EqualTo(10.166666666666666d));
+        }
     }
 }
