@@ -88,8 +88,22 @@ namespace Summator.Tests
             var arr = new long[] { };
             var actual = SummatorCode.Average(arr);
             Assert.That(actual, Is.EqualTo(0));
-
-
         }
-    }
+
+        [Test]
+        public void Test_Average_With_PositiveValue_Arr()
+        {
+            var arr = new long[] {10,20,30 };
+            var actual = SummatorCode.Average(arr);
+            Assert.That(actual, Is.EqualTo(20));
+        }
+
+    //    [Test]
+    //    public void Test_Average_With_PositiveValueFloat_Arr()
+    //    {
+    //        var arr = new long[] { 10.5, 20,5, 30 };
+    //        var actual = SummatorCode.Average(arr);
+    //        Assert.That(actual, Is.EqualTo(20));
+    //    }
+    //}
 }
