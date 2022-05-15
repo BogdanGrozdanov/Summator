@@ -15,7 +15,7 @@ namespace Summator.Tests
         {
             var arr = new long[] { };
 
-            var result = Summator.Sum(arr);
+            var result = SummatorCode.Sum(arr);
             var expected = 0;
 
             Assert.That(result == expected);
@@ -24,7 +24,7 @@ namespace Summator.Tests
         [Test]
         public void Test_Sum_One_Positive_Numbers()
         {
-            long actual = Summator.Sum(new long[] { 3 });
+            long actual = SummatorCode.Sum(new long[] { 3 });
 
             int expected = 3;
 
@@ -34,7 +34,7 @@ namespace Summator.Tests
         [Test]
         public void Test_Sum_One_Negative_Numbers()
         {
-            long actual = Summator.Sum(new long[] { -3 });
+            long actual = SummatorCode.Sum(new long[] { -3 });
 
             int expected = -3;
 
@@ -44,7 +44,7 @@ namespace Summator.Tests
         [Test]
         public void Test_Sum_Two_Positive_Numbers()
         {
-            long actual = Summator.Sum(new long[] { 1, 3 });
+            long actual = SummatorCode.Sum(new long[] { 1, 3 });
 
             int expected = 4;
 
@@ -55,7 +55,7 @@ namespace Summator.Tests
         public void Test_Sum_With_Big_Number()
         {
 
-            long actual = Summator.Sum(new long[] { 1000000000, 1000000000 });
+            long actual = SummatorCode.Sum(new long[] { 1000000000, 1000000000 });
 
             int expected = 2000000000;
 
@@ -65,7 +65,7 @@ namespace Summator.Tests
         [Test]
         public void Test_Sum_Two_Negative_Numbers()
         {
-            long actual = Summator.Sum(new long[] { -1, -3 });
+            long actual = SummatorCode.Sum(new long[] { -1, -3 });
 
             int expected = -4;
 
@@ -75,7 +75,7 @@ namespace Summator.Tests
         [Test]
         public void Test_Sum_With_PositiveAndNegative_Numbers()
         {
-            long actual = Summator.Sum(new long[] { -1, 3 });
+            long actual = SummatorCode.Sum(new long[] { -1, 3 });
 
             int expected = 2;
 
@@ -86,10 +86,10 @@ namespace Summator.Tests
         public void Test_Average_With_Empty_Arr()
         {
             var arr = new long[] { };
-            var actual = Summator.Average(arr);
+            var actual = SummatorCode.Average(arr);
             Assert.That(actual, Is.EqualTo(0));
 
-            
+
         }
     }
 }
